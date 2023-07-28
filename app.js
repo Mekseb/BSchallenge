@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/blogDB");
+mongoose.connect("mongodb+srv://mekseb:mekseb@cluster0.lxplbca.mongodb.net/blogDB");
 
 //Postschema
 const postschema = new mongoose.Schema({
@@ -29,7 +29,7 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res){
 
-    postsarr.push(Posts.find())
+    //postsarr.push(Posts.find())
  
     Posts.find().then(function (post) {
         
